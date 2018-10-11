@@ -69,7 +69,7 @@
       </van-button>
     </div>
 
-    <popup v-model="showAreaPopup" position="bottom" :lazy-render="false" :get-container="getAreaContainer">
+    <popup v-model="showAreaPopup" position="bottom" :lazy-render="false" get-container="body">
       <van-area
         ref="area"
         :loading="!areaListLoaded"
@@ -99,6 +99,7 @@ import validateMobile from '../utils/validate/mobile';
 const defaultData = {
   name: '',
   tel: '',
+  country: '',
   province: '',
   city: '',
   county: '',
@@ -181,13 +182,13 @@ export default create({
     },
 
     areaText() {
-      const { province, city, county, areaCode } = this.data;
-      if (province && city && county && areaCode) {
-        const arr = [province, city, county];
-        if (province === city) {
-          arr.shift();
+      const { country, province, city, county, areaCode } = this.data;
+      if (areaCode) {
+        const arr = [country, province, city, county];
+        if (province && province === city) {
+          arr.splice(1, 1);
         }
-        return arr.join('/');
+        return arr.filter(text => text).join('/');
       }
       return '';
     }
@@ -226,17 +227,18 @@ export default create({
 
     onAreaConfirm(values) {
       this.showAreaPopup = false;
-      this.data.areaCode = values[2].code;
-      this.assignAreaValues(values);
+      this.assignAreaValues();
       this.$emit('change-area', values);
     },
 
     assignAreaValues(values) {
-      Object.assign(this.data, {
-        province: values[0] ? values[0].name : '',
-        city: values[1] ? values[1].name : '',
-        county: values[2] ? values[2].name : ''
-      });
+      const { area } = this.$refs;
+      if (area) {
+        const detail = area.getArea();
+        detail.areaCode = detail.code;
+        delete detail.code;
+        Object.assign(this.data, detail);
+      }
     },
 
     onSave() {
@@ -298,20 +300,11 @@ export default create({
     // set area code to area component
     setAreaCode(code) {
       this.data.areaCode = code || '';
-      this.$nextTick(() => {
-        const { area } = this.$refs;
-        if (area) {
-          this.assignAreaValues(area.getValues());
-        }
-      });
+      code && this.$nextTick(this.assignAreaValues);
     },
 
     setAddressDetail(value) {
       this.data.addressDetail = value;
-    },
-
-    getAreaContainer() {
-      return document.body;
     }
   }
 });

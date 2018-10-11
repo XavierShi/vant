@@ -35,6 +35,7 @@ const createComponent = () => {
     data,
     field,
     button,
+    wrapper,
     errorInfo
   };
 };
@@ -118,26 +119,6 @@ test('valid postal code', () => {
   vm.showPostal = false;
   button.trigger('click');
   expect(errorInfo.postalCode).toBeFalsy();
-});
-
-test('select area', () => {
-  const wrapper = mount(AddressEdit, {
-    propsData: {
-      areaList
-    }
-  });
-  const { vm } = wrapper;
-  const { data } = vm;
-
-  vm.onAreaConfirm([
-    { name: '北京市' },
-    { name: '北京市' },
-    { name: '朝阳区', code: '123456' }
-  ]);
-  expect(data.province).toEqual('北京市');
-  expect(data.city).toEqual('北京市');
-  expect(data.county).toEqual('朝阳区');
-  expect(data.areaCode).toEqual('123456');
 });
 
 test('on change detail', () => {
@@ -244,4 +225,16 @@ test('delete address', async() => {
   await later();
   expect(wrapper.emitted('delete')).toBeTruthy();
   expect(wrapper.emitted('cancel-delete')).toBeTruthy();
+});
+
+test('setAddressDetail method', () => {
+  const { vm, data } = createComponent();
+  vm.setAddressDetail('test');
+  expect(data.addressDetail).toEqual('test');
+});
+
+test('select area', () => {
+  const { wrapper, data } = createComponent();
+  wrapper.find('.van-picker__confirm').trigger('click');
+  expect(data.areaCode).toEqual('110101');
 });

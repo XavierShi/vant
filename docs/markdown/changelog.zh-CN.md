@@ -1,5 +1,59 @@
 ## 更新日志
 
+### [1.3.5](https://github.com/youzan/vant/tree/v1.3.5)
+`2018-10-10`
+
+**Improvements**
+
+- Tab: 样式升级 [\#1908](https://github.com/youzan/vant/pull/1908)
+- Badge: 样式升级 [\#1907](https://github.com/youzan/vant/pull/1907)
+- Dialog: 样式升级 [\#1906](https://github.com/youzan/vant/pull/1906)
+- NoticeBar: 样式升级 [\#1893](https://github.com/youzan/vant/pull/1893)
+- Collapse: 新增 disabled 属性 [\#1892](https://github.com/youzan/vant/pull/1892)
+- TreeSelect: 新增 height 属性 [\#1905](https://github.com/youzan/vant/pull/1905)
+- ImagePreview: 支持手势缩放图片 [\#1895](https://github.com/youzan/vant/pull/1895)
+
+**Bug Fixes**
+
+- 修复 Toast 在 SSR 时报错的问题 [\#1910](https://github.com/youzan/vant/pull/1910)
+- 修复 Swipe 多指触控时可能导致展示错误的问题 [\#1890](https://github.com/youzan/vant/pull/1890)
+
+
+### [1.3.4](https://github.com/youzan/vant/tree/v1.3.4)
+`2018-10-02`
+
+**Improvements**
+
+- Button: 新增 round 属性 [\#1885](https://github.com/youzan/vant/pull/1885)
+- Button: 优化禁用态样式 [\#1886](https://github.com/youzan/vant/pull/1886)
+- Card: 新增 tag 属性 [\#1878](https://github.com/youzan/vant/pull/1878)
+- Card: 新增 thumb-link 属性 [\#1879](https://github.com/youzan/vant/pull/1879)
+- ImagePreview: 新增 show-index 属性 [\#1889](https://github.com/youzan/vant/pull/1889)
+- Picker: 优化样式 [\#1887](https://github.com/youzan/vant/pull/1887)
+- SwipeCell: 新增 disabled 属性 [\#1884](https://github.com/youzan/vant/pull/1884)
+
+**Bug Fixes**
+
+- 修复 Toast 类型定义错误 [\#1859](https://github.com/youzan/vant/pull/1859)
+
+
+### [1.3.3](https://github.com/youzan/vant/tree/v1.3.3)
+`2018-09-23`
+
+**Improvements**
+
+- SwipeCell: 新增 click 事件 [\#1848](https://github.com/youzan/vant/pull/1848)
+- Locale: 优化错误处理 [\#1835](https://github.com/youzan/vant/pull/1835)
+- 文档: 增加单个组件的更新日志 [\#1816](https://github.com/youzan/vant/pull/1816)
+
+**Bug Fixes**
+
+- 修复 DatetimePicker 时间范围变化时未正确更新 value 的问题 [\#1825](https://github.com/youzan/vant/pull/1825)
+- 修复 Field 类型为 number 时 maxlength 属性不生效的问题 [\#1839](https://github.com/youzan/vant/pull/1839)
+- 修复 PullRefresh 在部分情况下提示 preventDefault 警告的问题 [\#1819](https://github.com/youzan/vant/pull/1819)
+- 修复 Tag 边框颜色错误的问题 [\#1834](https://github.com/youzan/vant/pull/1834)
+
+
 ### [1.3.2](https://github.com/youzan/vant/tree/v1.3.2)
 `2018-09-14`
 

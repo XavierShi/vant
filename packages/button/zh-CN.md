@@ -22,10 +22,31 @@ Vue.use(Button);
 #### 朴素按钮
 
 ```html
-<van-button type="default" plain>默认按钮</van-button>
-<van-button type="primary" plain>主要按钮</van-button>
-<van-button type="warning" plain>警告按钮</van-button>
-<van-button type="danger" plain>危险按钮</van-button>
+<van-button plain type="primary">朴素按钮</van-button>
+<van-button plain type="danger">朴素按钮</van-button>
+```
+
+#### 禁用状态
+
+通过`disabled`属性来禁用按钮，此时按钮不可点击
+
+```html
+<van-button disabled type="primary">禁用状态</van-button>
+<van-button disabled type="danger">禁用状态</van-button>
+```
+
+#### 加载状态
+
+```html 
+<van-button loading type="primary" />
+<van-button loading type="danger" />
+```
+
+#### 按钮形状
+
+```html 
+<van-button square type="primary">方形按钮</van-button>
+<van-button round type="danger">圆形按钮</van-button>
 ```
 
 #### 按钮尺寸
@@ -36,30 +57,6 @@ Vue.use(Button);
 <van-button size="normal">普通按钮</van-button>
 <van-button size="small">小型按钮</van-button>
 <van-button size="mini">迷你按钮</van-button>
-```
-
-#### 禁用状态
-通过`disabled`属性来禁用按钮，此时按钮不可点击
-
-```html
-<van-button disabled>禁用状态</van-button>
-```
-
-#### 加载状态
-
-```html 
-<van-button loading />
-<van-button loading type="primary" />
-```
-
-#### 自定义按钮标签
-
-按钮标签默认为`button`，可以使用`tag`属性来修改按钮标签
-
-```html 
-<van-button tag="a" href="https://www.youzan.com" target="_blank">
-  按钮
-</van-button>
 ```
 
 
@@ -73,9 +70,10 @@ Vue.use(Button);
 | tag | 按钮 HTML 标签 | `String` | `button` |
 | native-type | 按钮类型（原生） | `String` | - |
 | plain | 是否为朴素按钮 | `Boolean` | `false` |
-| disabled | 是否禁用 | `Boolean` | `false` |
+| disabled | 是否禁用按钮 | `Boolean` | `false` |
 | loading | 是否显示为加载状态 | `Boolean` | `false` |
 | block | 是否为块级元素 | `Boolean` | `false` |
+| round | 是否为圆形按钮 | `Boolean` | `false` |
 | square | 是否为方形按钮 | `Boolean` | `false` |
 
 ### Event
@@ -88,6 +86,7 @@ Vue.use(Button);
 
 | 版本 | 类型 | 内容 |
 |-----------|-----------|-----------|
+| 1.3.4 | feature | 新增 round 属性 |
 | 1.3.1 | bugfix | 修复加载图标颜色错误的问题
 | 1.2.0 | feature | 新增 square 属性
 | 1.1.15 | feature | 新增 warning 类型
@@ -95,7 +94,3 @@ Vue.use(Button);
 | 1.1.13 | feature | 新增 plain 属性
 | 1.0.5 | bugfix | 修复 loading 状态下无法水平对齐的问题
 | 1.0.4 | bugfix | 修复加载状态下可点击的问题
-| 0.12.5 | feature | 新增 text 属性
-| 0.12.1 | improvement | 调整 small 按钮内边距
-| 0.9.10 | bugfix | 修复选中状态下边框样式问题
-| 0.9.4 | bugfix | 修复不可用且选中时背景色错误的问题

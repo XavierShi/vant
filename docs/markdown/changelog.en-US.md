@@ -1,5 +1,59 @@
 ## Changelog
 
+### [1.3.5](https://github.com/youzan/vant/tree/v1.3.5)
+`2018-10-10`
+
+**Improvements**
+
+- Tab: upgrade style [\#1908](https://github.com/youzan/vant/pull/1908)
+- Badge: upgrade style [\#1907](https://github.com/youzan/vant/pull/1907)
+- Dialog: upgrade style [\#1906](https://github.com/youzan/vant/pull/1906)
+- NoticeBar: upgrade style [\#1893](https://github.com/youzan/vant/pull/1893)
+- Collapse: add disabled prop [\#1892](https://github.com/youzan/vant/pull/1892)
+- TreeSelect: add height prop [\#1905](https://github.com/youzan/vant/pull/1905)
+- ImagePreview: support finger zooming [\#1895](https://github.com/youzan/vant/pull/1895)
+
+**Bug Fixes**
+
+- fix Toast SSR error [\#1910](https://github.com/youzan/vant/pull/1910)
+- fix Swipe multi finger [\#1890](https://github.com/youzan/vant/pull/1890)
+
+
+### [1.3.4](https://github.com/youzan/vant/tree/v1.3.4)
+`2018-10-02`
+
+**Improvements**
+
+- Button: add round prop [\#1885](https://github.com/youzan/vant/pull/1885)
+- Button: update disabled style [\#1886](https://github.com/youzan/vant/pull/1886)
+- Card: add tag prop [\#1878](https://github.com/youzan/vant/pull/1878)
+- Card: add thumb-link prop [\#1879](https://github.com/youzan/vant/pull/1879)
+- ImagePreview: add show-index prop [\#1889](https://github.com/youzan/vant/pull/1889)
+- Picker: update style [\#1887](https://github.com/youzan/vant/pull/1887)
+- SwipeCell: add disabled prop [\#1884](https://github.com/youzan/vant/pull/1884)
+
+**Bug Fixes**
+
+- fix Toast type definition [\#1859](https://github.com/youzan/vant/pull/1859)
+
+
+### [1.3.3](https://github.com/youzan/vant/tree/v1.3.3)
+`2018-09-23`
+
+**Improvements**
+
+- SwipeCell: add click event [\#1848](https://github.com/youzan/vant/pull/1848)
+- Locale: optimize error handling [\#1835](https://github.com/youzan/vant/pull/1835)
+- Document: add Component changelog [\#1816](https://github.com/youzan/vant/pull/1816)
+
+**Bug Fixes**
+
+- fix DatetimePicker should update value when range changed [\#1825](https://github.com/youzan/vant/pull/1825)
+- fix Field maxlength not work when type = number [\#1839](https://github.com/youzan/vant/pull/1839)
+- fix PullRefresh preventDefault warning [\#1819](https://github.com/youzan/vant/pull/1819)
+- fix Tag white border [\#1834](https://github.com/youzan/vant/pull/1834)
+
+
 ### [1.3.2](https://github.com/youzan/vant/tree/v1.3.2)
 `2018-09-14`
 

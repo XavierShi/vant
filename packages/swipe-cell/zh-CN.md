@@ -63,6 +63,7 @@ export default {
 | left-width | 左侧滑动区域宽度 | `Number` | `0` |
 | right-width | 右侧滑动区域宽度 | `Number` | `0` |
 | on-close | 关闭时的回调函数 | `Function` | - |
+| disabled | 是否禁用滑动 | `Boolean` | `false` |
 
 ### Slot
 
@@ -71,6 +72,12 @@ export default {
 | - | 自定义显示内容 |
 | left | 左侧滑动内容 |
 | right | 右侧滑动内容 |
+
+### Event
+
+| 事件名 | 说明 | 参数 |
+|-----------|-----------|-----------|
+| click | 点击时触发 | 关闭时的点击位置 (`left` `right` `cell` `outside`) |
 
 ### onClose 参数
 
@@ -92,9 +99,8 @@ export default {
 
 | 版本 | 类型 | 内容 |
 |-----------|-----------|-----------|
-| 1.2.0 | breaking change | 组件命名由 CellSwipe 修改为 SwipeCell
+| 1.3.4 | feature | 新增 disabled 属性 |
+| 1.3.3 | feature | 新增 click 事件 |
+| 1.2.0 | breaking change | 组件命名由 CellSwipe 修改为 SwipeCell |
 | 1.1.15 | feature | 新增 open 方法 |
 | 1.0.5 | bugfix | 修复在垂直滑动时也会触发 Swipe 的问题 |
-| 1.0.0 | improvement | 优化动画流畅度 |
-| 0.11.3 | feature | 新增 onClose 属性，支持异步控制 |
-| 0.6.0 | feature | 新增组件 |

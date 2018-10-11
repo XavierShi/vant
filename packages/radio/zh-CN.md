@@ -31,7 +31,7 @@ export default {
 ```
 
 #### 禁用状态
-通过`disabled`属性禁止选项切换，在`van-radio`上设置`diabled`可以禁用单个选项
+通过`disabled`属性禁止选项切换，在`van-radio`上设置`disabled`可以禁用单个选项
 
 ```html
 <van-radio-group v-model="radio" disabled>
@@ -86,5 +86,3 @@ export default {
 | 1.1.13 | feature | 新增 label-position 属性 |
 | 1.1.13 | feature | 新增 label-disabled 属性 |
 | 1.0.5 | feature | name 属性支持任意类型 |
-| 0.12.1 | bugfix | 修复图标无法点击的问题 |
-| 0.11.6 | bugfix | 修复禁用态样式错误 |
